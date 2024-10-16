@@ -207,6 +207,11 @@ int main() {
     std::cout << ">>> ";
     std::getline(std::cin, input);
 
+    if (input == "exit") {
+      is_running = false;
+      continue;
+    }
+
     try {
       Lexer lexer(input);
       Parser parser(lexer);
